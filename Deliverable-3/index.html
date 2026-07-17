@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Workspace Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 1. Timed Content Switcher Banner -->
+    <div id="promo-banner" class="banner">System Notice: Welcome to your workspace dashboard.</div>
+
+    <div class="app-container">
+        <h1>Advanced Task Control</h1>
+        <p class="subtitle">Module 3: Real-Time Interaction & Automation</p>
+
+        <!-- 2. Search & Filter Input Element -->
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search tasks by keyword...">
+        </div>
+        
+        <!-- Reusable Container UI Component -->
+        <div id="tasks-grid"></div>
+
+        <!-- 3. Chatbot Auto-Responder Interface Widget -->
+        <div class="chat-widget">
+            <h3>Support Auto-Responder</h3>
+            <div id="chat-logs" class="chat-box">
+                <p class="bot-msg">🤖 Hello! Ask me about "status", "tasks", or "help".</p>
+            </div>
+            <div class="chat-input-row">
+                <input type="text" id="chat-input" placeholder="Type a message...">
+                <button id="send-chat-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
