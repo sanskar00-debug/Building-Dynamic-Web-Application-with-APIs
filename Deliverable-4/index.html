@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-Driven Automation Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Safe Chart.js CDN link for visual rendering -->
+    <script src="https://jsdelivr.net"></script>
+</head>
+<body>
+    <div class="app-container">
+        <h1>Analytical Task Dashboard</h1>
+        <p class="subtitle">Module 4: Personalization & Visual Data Analytics</p>
+
+        <!-- Interactive Control Bar -->
+        <div class="control-panel">
+            <div class="control-group">
+                <label for="category-select">Filter Category:</label>
+                <select id="category-select">
+                    <option value="all">All Categories</option>
+                    <option value="Development">Development</option>
+                    <option value="Database">Database</option>
+                    <option value="Design">Design</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="view-toggle">Display Mode:</label>
+                <button id="view-toggle" class="toggle-btn">Switch to Chart View</button>
+            </div>
+        </div>
+
+        <!-- Layout 1: Dynamic Data List View -->
+        <div id="list-view-container" class="view-section">
+            <div id="tasks-grid"></div>
+        </div>
+
+        <!-- Layout 2: Responsive Visual Chart View (Hidden Initially) -->
+        <div id="chart-view-container" class="view-section hidden">
+            <div class="chart-wrapper">
+                <canvas id="analytics-chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
