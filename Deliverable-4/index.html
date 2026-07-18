@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data-Driven Automation Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Safe Chart.js CDN link for visual rendering -->
-    <script src="https://jsdelivr.net"></script>
 </head>
 <body>
     <div class="app-container">
@@ -36,10 +34,13 @@
             <div id="tasks-grid"></div>
         </div>
 
-        <!-- Layout 2: Responsive Visual Chart View (Hidden Initially) -->
+        <!-- Layout 2: Custom Local HTML/CSS Chart View (Completely Network-Safe) -->
         <div id="chart-view-container" class="view-section hidden">
-            <div class="chart-wrapper">
-                <canvas id="analytics-chart"></canvas>
+            <div class="custom-chart-card">
+                <h3>Allocated Workload Distribution (Hours)</h3>
+                <div id="custom-bar-graph" class="graph-container">
+                    <!-- JavaScript will dynamically inject the bar elements here -->
+                </div>
             </div>
         </div>
     </div>
