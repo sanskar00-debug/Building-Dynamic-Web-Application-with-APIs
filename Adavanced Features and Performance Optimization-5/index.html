@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production-Ready Application Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Application Header -->
+        <header>
+            <h1>Production Workspace</h1>
+            <p class="subtitle">Module 5: Stability, Persistence & Throttling Optimization</p>
+        </header>
+
+        <!-- Preference Persistence Panel -->
+        <section class="config-panel">
+            <div class="control-group">
+                <label for="theme-pref">Workspace Theme:</label>
+                <select id="theme-pref">
+                    <option value="light-mode">Light Workspace</option>
+                    <option value="dark-mode">Dark Workspace</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="limit-input">Fetch Rate Cap:</label>
+                <input type="number" id="limit-input" min="1" max="100" value="10" placeholder="Tasks">
+            </div>
+        </section>
+
+        <!-- Fault-Tolerant Feedback System -->
+        <div id="toast-notification" class="toast hidden"></div>
+
+        <!-- Action Module -->
+        <section class="action-bar">
+            <button id="secure-fetch-btn" class="primary-btn">Synchronize Records</button>
+            <span id="rate-badge" class="badge dynamic">Requests Sent Today: 0/5</span>
+        </section>
+
+        <!-- Dynamic Data Render View Context -->
+        <main class="dashboard-body">
+            <!-- Loading Skeleton States -->
+            <div id="skeleton-loader" class="hidden">
+                <div class="skeleton-card animate-pulse"></div>
+                <div class="skeleton-card animate-pulse"></div>
+            </div>
+
+            <!-- Dynamic Output Container -->
+            <div id="data-viewport">
+                <p class="fallback-msg">No synchronized records in buffer memory. Click synchronize above.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
