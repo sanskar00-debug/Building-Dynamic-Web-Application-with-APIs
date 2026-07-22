@@ -1,0 +1,35 @@
+/* Core Structural Layouts */
+:root { --bg-app: #f8fafc; --bg-surface: #ffffff; --text-main: #0f172a; --text-sub: #64748b; --border-color: #e2e8f0; --btn-primary: #2563eb; }
+.dark-mode { --bg-app: #0f172a; --bg-surface: #1e293b; --text-main: #f8fafc; --text-sub: #94a3b8; --border-color: #334155; --btn-primary: #3b82f6; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; transition: background 0.25s, color 0.25s; }
+body { background-color: var(--bg-app); color: var(--text-main); padding: 20px; }
+.app-container { width: 100%; max-width: 650px; margin: 20px auto; }
+h1 { font-size: 1.75rem; text-align: center; }
+.subtitle { font-size: 0.9rem; text-align: center; color: var(--text-sub); margin-bottom: 25px; }
+
+/* Config Panel Styles */
+.config-panel { background: var(--bg-surface); border: 1px solid var(--border-color); padding: 15px 20px; border-radius: 10px; display: flex; justify-content: space-between; gap: 15px; margin-bottom: 20px; }
+.control-group { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; }
+select, input { padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--bg-surface); color: var(--text-main); outline: none; max-width: 140px; }
+
+/* Fault-Tolerant Toasts */
+.toast { padding: 12px 20px; border-radius: 8px; font-size: 0.9rem; font-weight: bold; margin-bottom: 20px; text-align: center; }
+.toast.error { background-color: #fee2e2; color: #ef4444; border: 1px solid #fca5a5; }
+.toast.success { background-color: #d1fae5; color: #059669; border: 1px solid #6ee7b7; }
+
+/* Control Actions */
+.action-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.primary-btn { background-color: var(--btn-primary); color: #fff; border: none; padding: 10px 20px; font-weight: 600; border-radius: 6px; cursor: pointer; }
+.primary-btn:hover { opacity: 0.9; }
+.badge.dynamic { background: var(--bg-surface); border: 1px solid var(--border-color); padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; color: var(--text-sub); }
+
+/* Output Elements */
+.task-item { background: var(--bg-surface); border: 1px solid var(--border-color); padding: 15px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.02); }
+.fallback-msg { text-align: center; color: var(--text-sub); padding: 4px 0; margin-top: 40px; font-style: italic; }
+
+/* Skeleton Loading Screens */
+.skeleton-card { background: var(--border-color); height: 60px; border-radius: 8px; margin-bottom: 12px; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .4; } }
+.animate-pulse { animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+.hidden { display: none !important; }
